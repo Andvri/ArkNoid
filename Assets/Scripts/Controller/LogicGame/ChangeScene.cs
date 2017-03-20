@@ -14,17 +14,16 @@ public class ChangeScene : MonoBehaviour {
     void Start () {
 	
 	}
-    [ContextMenu("Cargar Scene")]
-    public void cargarScene()
-    {
+   
+    public void LoadScene() {
         Invoke("_ChangeScene", time);
-    }
+    } 
 
     public void _ChangeScene()
     {
         SceneManager.LoadScene(SceneName);
     }
-    public void Salir()
+    public void Quit()
     {
         Application.Quit();
         Debug.Log("Sali de la app");
