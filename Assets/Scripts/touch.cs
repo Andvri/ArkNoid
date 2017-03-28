@@ -2,20 +2,13 @@
 using System.Collections;
 
 public class touch : MonoBehaviour {
-    public GameObject tabla;
-    public Transform cilindro;
-    public Vector3 rotationg;
-    public float angulo;
-    public float LimitA;
-    public float Velocit;
-    public Rigidbody CRPelota;
+	
+	public GameObject table;
+	private GameObject ball;
 
     // Use this for initialization
     void Start () {
-        Velocit = 300f;
-        LimitA = 0.6f;
-        rotationg = Vector3.zero;
-        angulo = 0;
+		ball = GameObject.Find ("Ball");
     }
 
  
@@ -26,10 +19,15 @@ public class touch : MonoBehaviour {
         {
             if(touchactual.tapCount == 2)
             {
-                float ang = (((cilindro.rotation.y * 100) *Mathf.PI)/180f);
-                Vector3 force = new Vector3(Velocit*Mathf.Sin(ang), 0,Velocit*Mathf.Cos(ang));
-                CRPelota.AddForce(force);
-                break;
+				
+				GameObject angle = GameObject.Find ("Angle");
+				Destroy (angle);
+				ball.transform.parent = null;
+
+				Rigidbody BallRB = ball.GetComponent<Rigidbody> ();
+				Vector3 newF = ball.transform.forward * 1250 * Time.deltaTime;
+				BallRB.velocity = newF;
+				break;
             }
            
             if (touchactual.phase == TouchPhase.Began)
@@ -40,25 +38,39 @@ public class touch : MonoBehaviour {
             {
 
                 float moveH = touchactual.deltaPosition.x;
-                Transform moveOb = tabla.GetComponent<Transform>();
+                Transform moveOb = table.GetComponent<Transform>();
                 float newX = (moveH * Time.deltaTime * 3) + moveOb.position.x;
-                moveOb.transform.position = new Vector3(Mathf.Clamp(newX, -5, 5), moveOb.transform.position.y, moveOb.transform.position.z);
+                moveOb.transform.position = new Vector3(Mathf.Clamp(newX, -9.4f, 9.4f), moveOb.transform.position.y, moveOb.transform.position.z);
 
                 break;
             }
             if (touchactual.phase == TouchPhase.Stationary)
             {
-                rotationg = new Vector3(0, touchactual.position.x, touchactual.position.y);
-                angulo = Vector3.Angle(rotationg, Vector3.forward);
-                cilindro.Rotate(Vector3.up, (angulo - 30)/10);
-                if( cilindro.rotation.y > LimitA)
-                {
-                    cilindro.Rotate(Vector3.up, 100*(LimitA - cilindro.rotation.y));
-                }
-                if(cilindro.rotation.y < -LimitA)
-                {
-                    cilindro.Rotate(Vector3.up, -100 * (LimitA +cilindro.rotation.y));
-                }
+				Vector2 touchPosition = touchactual.position;
+				double halfScreen = Screen.width / 2.0;
+				Vector3 temp;
+				float currVal;
+
+				Debug.Log (ball.transform.eulerAngles.y);
+				if(touchPosition.x < halfScreen){									
+					ball.transform.Rotate (Vector3.down * 80 * Time.deltaTime);	
+					if (280 > ball.transform.eulerAngles.y && !(ball.transform.eulerAngles.y >= 0 && ball.transform.eulerAngles.y <= 80)) {
+						temp = ball.transform.eulerAngles;
+						temp.y = 280;
+						ball.transform.eulerAngles = temp;
+					}
+
+				} else if (touchPosition.x > halfScreen) {					
+					ball.transform.Rotate (Vector3.up * 80 * Time.deltaTime);	
+					if (80 < ball.transform.eulerAngles.y && !(ball.transform.eulerAngles.y >= 280 && ball.transform.eulerAngles.y <= 360) ) {
+						temp = ball.transform.eulerAngles;
+						temp.y = 80;
+						ball.transform.eulerAngles = temp;
+					}
+				}
+
+			
+
                 break;
             }
             
@@ -68,5 +80,21 @@ public class touch : MonoBehaviour {
 
 	
 	}
+
+	float fixedAngle(float angle, float min, float max){
+		Debug.Log (angle);
+
+		if (angle <= -360f) {
+			angle += 360;
+		}
+		if (angle > 360f) {
+			angle -= 360;
+		}
+
+		return Mathf.Clamp (angle, min, max);
+
+	}
+
+
 
 }
