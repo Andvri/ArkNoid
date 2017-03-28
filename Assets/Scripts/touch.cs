@@ -4,8 +4,10 @@ using System.Collections;
 public class touch : MonoBehaviour {
 	
 	public GameObject table;
-	private GameObject ball;
-	private bool play;
+    public GameObject angle;
+
+    private GameObject ball;
+	public bool play;
 
     // Use this for initialization
     void Start () {
@@ -23,8 +25,8 @@ public class touch : MonoBehaviour {
             {
 
 				if (!play) {
-					GameObject angle = GameObject.Find ("Angle");
-					Destroy (angle);
+
+                    angle.SetActive(false);
 					ball.transform.parent = null;
 
 					Rigidbody BallRB = ball.GetComponent<Rigidbody> ();
@@ -54,9 +56,9 @@ public class touch : MonoBehaviour {
 				Vector2 touchPosition = touchactual.position;
 				double halfScreen = Screen.width / 2.0;
 				Vector3 temp;
-				float currVal;
+				
 
-				Debug.Log (ball.transform.eulerAngles.y);
+				//Debug.Log (ball.transform.eulerAngles.y);
 				if(touchPosition.x < halfScreen){									
 					ball.transform.Rotate (Vector3.down * 80 * Time.deltaTime);	
 					if (280 > ball.transform.eulerAngles.y && !(ball.transform.eulerAngles.y >= 0 && ball.transform.eulerAngles.y <= 80)) {
@@ -87,7 +89,7 @@ public class touch : MonoBehaviour {
 	}
 
 	float fixedAngle(float angle, float min, float max){
-		Debug.Log (angle);
+		//Debug.Log (angle);
 
 		if (angle <= -360f) {
 			angle += 360;
