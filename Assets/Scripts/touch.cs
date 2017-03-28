@@ -5,10 +5,12 @@ public class touch : MonoBehaviour {
 	
 	public GameObject table;
 	private GameObject ball;
+	private bool play;
 
     // Use this for initialization
     void Start () {
 		ball = GameObject.Find ("Ball");
+		play = false;
     }
 
  
@@ -19,14 +21,17 @@ public class touch : MonoBehaviour {
         {
             if(touchactual.tapCount == 2)
             {
-				
-				GameObject angle = GameObject.Find ("Angle");
-				Destroy (angle);
-				ball.transform.parent = null;
 
-				Rigidbody BallRB = ball.GetComponent<Rigidbody> ();
-				Vector3 newF = ball.transform.forward * 1250 * Time.deltaTime;
-				BallRB.velocity = newF;
+				if (!play) {
+					GameObject angle = GameObject.Find ("Angle");
+					Destroy (angle);
+					ball.transform.parent = null;
+
+					Rigidbody BallRB = ball.GetComponent<Rigidbody> ();
+					Vector3 newF = ball.transform.forward * 1250 * Time.deltaTime;
+					BallRB.velocity = newF;
+					play = true;
+				}
 				break;
             }
            
