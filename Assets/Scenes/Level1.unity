@@ -588,7 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResetPosition: {x: 0, y: 0, z: 0}
   angle: {fileID: 118538706}
-  sta: {fileID: 0}
+  sta: {fileID: 107712637}
   controllerparent: {fileID: 1441193999}
 --- !u!1 &754428992
 GameObject:
@@ -1344,7 +1344,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1280293749
 MonoBehaviour:
   m_ObjectHideFlags: 0
