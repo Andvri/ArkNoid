@@ -3,10 +3,14 @@ using System.Collections;
 
 public class Boss1 : MonoBehaviour {
     public GameObject ring;
-    public int numberofChild;
+    private int numberofChild;
     public int speed;
     public Vector3 despl;
-
+    public float timetoshoot;
+    private float time;
+    [Header("Shoot")]
+    public GameObject instatiate;
+    public GameObject patnerinst;
 	// Use this for initialization
 	void Start () {
         speed = 1;
@@ -18,7 +22,15 @@ public class Boss1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        time += Time.deltaTime;
+        if(time>= (timetoshoot* ring.transform.childCount))
+        {
+            time = 0f;
+            GameObject c1 = (GameObject) Instantiate(instatiate,patnerinst.transform);
+            c1.transform.localPosition = Vector3.zero;
+            c1.GetComponent<Beam>().Boom();
+            
+        }
         if (ring.transform.childCount < numberofChild)
         {
             numberofChild = ring.transform.childCount;

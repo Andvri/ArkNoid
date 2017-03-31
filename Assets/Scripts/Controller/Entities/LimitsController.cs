@@ -29,6 +29,10 @@ public class LimitsController : MonoBehaviour {
             }
 
         }
+        if (other.gameObject.CompareTag("Beam"))
+        {
+            Destroy(other.gameObject);
+        }
         
     }
 

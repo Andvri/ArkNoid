@@ -24,6 +24,7 @@ GameObject:
   - 23: {fileID: 23000011512753432}
   - 114: {fileID: 114000013001639274}
   - 114: {fileID: 114000013798434246}
+  - 122: {fileID: 122000011084187274}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -107,6 +108,17 @@ MonoBehaviour:
   PowerHealt: 10
   Point1: 5
   PointDes: 0
+--- !u!122 &122000011084187274
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012479732588}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 8954787
+  m_Size: 2
 --- !u!135 &135000012617513460
 SphereCollider:
   m_ObjectHideFlags: 1

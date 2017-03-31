@@ -30,7 +30,16 @@ public class TableController : MonoBehaviour {
     public void Reset()
     {
         transform.position = Vector3.zero;
-        instatiate();
+        if(GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play != false)
+        {
+            GameObject[] balls = GameObject.FindGameObjectsWithTag("Player");
+            foreach (var item in balls)
+            {
+                Destroy(item);
+            }
+            instatiate();
+        }
+        
         GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play = false;
     }
     public Object instatiate()

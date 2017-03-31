@@ -13,6 +13,7 @@ public class RandomStar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         randomV3 = new Vector3(Random.Range(-30, 30), Random.Range(-15, -3),35);
-        Instantiate(Stars, randomV3,transform.rotation);
+        GameObject obj=(GameObject)Instantiate(Stars, randomV3,transform.rotation);
+        obj.transform.SetParent(transform);
 	}
 }
