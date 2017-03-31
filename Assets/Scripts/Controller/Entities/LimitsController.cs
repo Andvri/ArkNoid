@@ -17,8 +17,12 @@ public class LimitsController : MonoBehaviour {
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("Salio");
-        BallController cB =other.gameObject.GetComponent<BallController>();
-        cB.Reset();
+        if(other.gameObject == GameObject.FindGameObjectWithTag("Player"))
+        {
+            BallController cB = other.gameObject.GetComponent<BallController>();
+            cB.Reset();
+        }
+        
     }
 
 
