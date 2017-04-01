@@ -31,7 +31,7 @@ public class touch : MonoBehaviour {
 					ball.transform.parent = null;
 
 					Rigidbody BallRB = ball.GetComponent<Rigidbody> ();
-					Vector3 newF = ball.transform.forward * 1250 * Time.deltaTime;
+					Vector3 newF = Vector3.ClampMagnitude(ball.transform.forward * 1250 * Time.deltaTime,30);
 					BallRB.velocity = newF;
 					play = true;
 				}

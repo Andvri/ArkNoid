@@ -35,4 +35,15 @@ public class BallController : MonoBehaviour {
         angle.SetActive(true);
         sta.play = false;
     }
+
+    // Se llama a OnCollisionEnter cuando este colisionador o cuerpo rígido comienza a tocar a otro cuerpo rígido o colisionador
+    private void OnCollisionEnter(Collision collision)
+    {
+        //if (collision.gameObject.CompareTag("Respawn")){
+            GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody>().velocity*1.2f,30);
+        //}
+            
+    }
+
+
 }

@@ -58,7 +58,7 @@ public class Test : MonoBehaviour {
          }
     }
     private void Multiplicar(GameObject ball) {
-       // ball.transform.localScale *= (9f/10f);
+       ball.transform.localScale *= (9f/10f);
         GameObject clone1 = Instantiate(ball);
         clone1.GetComponent<Rigidbody>().velocity =ball.GetComponent<Rigidbody>().velocity;
         GameObject clone2 = Instantiate(ball);

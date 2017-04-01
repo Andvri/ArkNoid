@@ -11,23 +11,26 @@ public class MenuPause : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(KeyCode.Escape) && !band){
-
-            Debug.Log("Entro en escape");
-            menupause.SetActive(true);
-            Time.timeScale = 0;
-            band = !band;
-            return;
+        if (Input.GetKey(KeyCode.Escape)){
+            MP();
+             
         }
-        if (Input.GetKey(KeyCode.Escape) && band)
-        {
+        
 
-            Debug.Log("Entro en escape");
+    }
+    public void MP()
+    {
+        if (band)
+        {
             menupause.SetActive(false);
             Time.timeScale = 1;
             band = !band;
-            return;
         }
-
+        else
+        {
+            menupause.SetActive(true);
+            Time.timeScale = 0;
+            band = !band;
+        }
     }
 }
