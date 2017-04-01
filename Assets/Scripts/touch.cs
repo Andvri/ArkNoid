@@ -48,7 +48,7 @@ public class touch : MonoBehaviour {
                 float moveH = touchactual.deltaPosition.x;
                 Transform moveOb = table.GetComponent<Transform>();
                 float newX = (moveH * Time.deltaTime * 3) + moveOb.position.x;
-                moveOb.transform.position = new Vector3(Mathf.Clamp(newX, -9.4f, 9.4f), moveOb.transform.position.y, moveOb.transform.position.z);
+                moveOb.transform.position = new Vector3(Mathf.Clamp(newX,-12.5f,12.5f), moveOb.transform.position.y, moveOb.transform.position.z);
 
                 break;
             }

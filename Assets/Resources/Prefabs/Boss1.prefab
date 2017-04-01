@@ -775,6 +775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: 0
   intensity: 0
+  Eje: {x: 0, y: 0, z: 0}
 --- !u!114 &114000010855952218
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -788,6 +789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: 0
   intensity: 0
+  Eje: {x: 0, y: 0, z: 0}
 --- !u!114 &114000011308526516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -843,6 +845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: 0
   intensity: 0
+  Eje: {x: 0, y: 0, z: 0}
 --- !u!114 &114000011963623416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -856,6 +859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: 0
   intensity: 0
+  Eje: {x: 0, y: 0, z: 0}
 --- !u!114 &114000012051708088
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -883,6 +887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: 0
   intensity: 0
+  Eje: {x: 0, y: 0, z: 0}
 --- !u!114 &114000012351362896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -895,11 +900,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ring: {fileID: 1000011453080132}
-  numberofChild: 0
   speed: 0
   despl: {x: 0, y: 0, z: 0}
-  timetoshoot: 0.125
-  time: 0
+  timetoshoot: 1
   instatiate: {fileID: 1000010116774306, guid: c17fabdb083b7d045ab16f234a47fed4, type: 2}
   patnerinst: {fileID: 1000011232132982}
 --- !u!114 &114000012461554950
@@ -929,6 +932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: 0
   intensity: 0
+  Eje: {x: 0, y: 0, z: 0}
 --- !u!114 &114000012789330984
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -942,6 +946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: 0
   intensity: 0
+  Eje: {x: 0, y: 0, z: 0}
 --- !u!114 &114000013153431152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -997,6 +1002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: 0
   intensity: 0
+  Eje: {x: 0, y: 0, z: 0}
 --- !u!114 &114000014203075270
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1010,6 +1016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: -1
   intensity: 5
+  Eje: {x: 0, y: 0, z: -1}
 --- !u!122 &122000010757745904
 Halo:
   m_ObjectHideFlags: 1

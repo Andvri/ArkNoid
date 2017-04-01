@@ -25,6 +25,7 @@ public class BallController : MonoBehaviour {
     [ContextMenu("Reset")]
     public void Reset()
     {
+        parent.transform.localScale = Vector3.one;
         transform.localScale = Vector3.one;
         controllerparent.Reset();
         transform.SetParent(parent);

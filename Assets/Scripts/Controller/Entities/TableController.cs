@@ -30,6 +30,8 @@ public class TableController : MonoBehaviour {
     public void Reset()
     {
         transform.position = Vector3.zero;
+        transform.localScale = Vector3.one;
+        GameObject.Find("Player").GetComponent<Transform>().localScale = Vector3.one;
         if(GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play != false)
         {
             GameObject[] balls = GameObject.FindGameObjectsWithTag("Player");

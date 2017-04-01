@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Angle
   - Beam
+  - PowerUp
   layers:
   - Default
   - TransparentFX
