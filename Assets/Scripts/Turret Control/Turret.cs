@@ -25,7 +25,7 @@ public class Turret: MonoBehaviour {
 				StartCoroutine( MoveTarget ());
 				//Debug.Log (RandomDirection.move);
 				GameObject toIns = (Instantiate (laser, turret.transform.position, turret.transform.rotation)).gameObject;
-				//toIns.SetActive(true);
+				toIns.SetActive(true);
 			}
 			spawnTime = Time.time + Random.Range(3,5);
 		}		

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Shoot : MonoBehaviour {
 
 	public GameObject destination;
-	public RandomDirection target;
 	Vector3 newPos;
 	bool isLerping;
 	bool deleted;
@@ -43,9 +42,10 @@ public class Shoot : MonoBehaviour {
 			Vector3 aux = destination.transform.position;
 			newPos = new Vector3 (aux.x, 90, aux.z);
 			this.transform.position = Vector3.Lerp (this.transform.position, newPos, Time.deltaTime * 0.55f);
+
 			if (this.transform.position.y >= 80f && !deleted) {
-				Destroy (this.gameObject);
 				deleted = true;
+				Destroy (this.gameObject);
 			}
 
 		}
