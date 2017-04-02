@@ -15,8 +15,8 @@ public class Test : MonoBehaviour {
         if(other.gameObject == GameObject.FindGameObjectWithTag("Respawn"))
         {
             selector = Random.Range(0f, 1f);
-            /*
-             if (selector>=0 && selector < 0.5)
+            
+             if (selector>=0.1 && selector < 0.5)
             {
                 ReScaleTable(Test.ReScalePlus);
             }
@@ -24,8 +24,8 @@ public class Test : MonoBehaviour {
             {
                 ReScaleTable(Test.ReScaleMinus);
             }
-            */
-            if (true || (selector >= 0 && selector < 0.1))
+            
+            if ((selector >= 0 && selector < 0.1))
             {
                 if(GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play)
                 {

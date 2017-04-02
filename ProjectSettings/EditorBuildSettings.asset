@@ -7,5 +7,10 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
+    guid: 5afa0d275ed02364da86a096fabe6bed
   - enabled: 1
     path: Assets/Scenes/Level1.unity
+    guid: 4a824c07f843e4c408e044ffd57f98f1
+  - enabled: 1
+    path: Assets/Scenes/ArcadeMode/L1.unity
+    guid: 38bb90bae121d4841b8d7169326ceed4

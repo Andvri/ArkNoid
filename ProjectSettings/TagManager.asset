@@ -7,6 +7,7 @@ TagManager:
   - Angle
   - Beam
   - PowerUp
+  - Destructible Entity
   layers:
   - Default
   - TransparentFX
