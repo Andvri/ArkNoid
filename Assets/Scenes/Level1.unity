@@ -278,7 +278,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012779704100, guid: af2435c486afb0a4580f031a59707327, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.789903
+      value: -4.6
       objectReference: {fileID: 0}
     - target: {fileID: 4000012779704100, guid: af2435c486afb0a4580f031a59707327, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1767,7 +1767,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 23bf1fc916f8872429317b0493debef7, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 23bf1fc916f8872429317b0493debef7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2279,7 +2279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e902ca3a1b7c71348bbb15c033a464f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Direccion: {x: 1, y: 0, z: 0}
+  Direccion: {x: 5, y: 0, z: 2}
   Desplazamiento: 10
 --- !u!1 &1715252081
 GameObject:
@@ -2522,6 +2522,24 @@ MonoBehaviour:
   PowerHealt: 10
   Point1: 1
   PointDes: 0
+--- !u!1 &1905222440 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010415353848, guid: af2435c486afb0a4580f031a59707327,
+    type: 2}
+  m_PrefabInternal: {fileID: 234709981}
+--- !u!114 &1905222444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1905222440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e902ca3a1b7c71348bbb15c033a464f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Direccion: {x: 5, y: 0, z: 0}
+  Desplazamiento: 10
 --- !u!1001 &1931665774
 Prefab:
   m_ObjectHideFlags: 0

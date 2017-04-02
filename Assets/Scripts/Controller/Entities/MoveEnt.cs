@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveEnt : MonoBehaviour {
     public Vector3 Direccion;
-    public int ida;
+    private int ida;
     public int Desplazamiento;
 	// Use this for initialization
 	void Start () {
@@ -15,12 +15,10 @@ public class MoveEnt : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 pos_ori = transform.position;
-        if (ida >0){
-            
+        if(ida > 0){
             transform.position = pos_ori +(Direccion*Time.deltaTime);
-            
         }
-        if (ida <= 0){
+        if(ida <= 0){
             transform.position = pos_ori - (Direccion * Time.deltaTime);
         }
         ida--;
