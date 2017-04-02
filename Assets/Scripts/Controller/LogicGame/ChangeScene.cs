@@ -23,6 +23,10 @@ public class ChangeScene : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneName);
     }
+    public void L1() {
+        SceneName = "L1";
+        LoadScene();
+    }
     public void Quit()
     {
         Application.Quit();

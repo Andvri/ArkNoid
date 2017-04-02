@@ -10,6 +10,7 @@ public class BlockPowerUp : MonoBehaviour {
         {
             powerUp.transform.SetParent(null);
             powerUp.GetComponent<ConstantForce>().force = Vector3.back * 5;
+            powerUp.GetComponent<Turn>().Eje = Vector3.forward;
                Destroy(gameObject);
         }
 
