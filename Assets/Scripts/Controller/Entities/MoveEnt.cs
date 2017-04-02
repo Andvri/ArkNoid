@@ -29,6 +29,9 @@ public class MoveEnt : MonoBehaviour {
         }
         if (ida <= 0){
             transform.position = pos_ori - (Direccion * Time.deltaTime * 0.08f);
+<<<<<<< HEAD
+>>>>>>> origin/master
+=======
 >>>>>>> origin/master
         }
         ida--;
