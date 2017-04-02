@@ -7,7 +7,7 @@ public class Beam : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+      
 	// Update is called once per frame
 	void Update () {
 	
@@ -23,8 +23,7 @@ public class Beam : MonoBehaviour {
     }
     [ContextMenu("Booms")]
     public void Boom()
-    {
-        
+    {   
         GetComponent<Rigidbody>().AddForce(Vector3.forward* -1000);
         transform.SetParent(null);
     }

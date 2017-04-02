@@ -26,8 +26,9 @@ public class Boss1 : MonoBehaviour {
         if(time>= (timetoshoot* ring.transform.childCount))
         {
             time = 0f;
-            GameObject c1 = (GameObject) Instantiate(instatiate,patnerinst.transform);
-            c1.transform.localPosition = Vector3.zero;
+            GameObject c1 = (GameObject) Instantiate(instatiate);
+            c1.transform.localPosition = transform.position;
+            c1.transform.Rotate(Vector3.left * -90);
             c1.GetComponent<Beam>().Boom();
             
         }
