@@ -15,11 +15,21 @@ public class MoveEnt : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Vector3 pos_ori = transform.position;
+<<<<<<< HEAD
         if(ida > 0){
             transform.position = pos_ori +(Direccion*Time.deltaTime);
         }
         if(ida <= 0){
             transform.position = pos_ori - (Direccion * Time.deltaTime);
+=======
+        if (ida >0){
+            
+            transform.position = pos_ori +(Direccion*Time.deltaTime * 0.05f);
+            
+        }
+        if (ida <= 0){
+            transform.position = pos_ori - (Direccion * Time.deltaTime * 0.08f);
+>>>>>>> origin/master
         }
         ida--;
         if (ida <= -Desplazamiento)
