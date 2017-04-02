@@ -34,7 +34,6 @@ public class SpawnMove : MonoBehaviour {
 				Z = toMove.transform.position.z + (Time.deltaTime * speed);
 			} else {
 				Z = toMove.transform.position.z + (Time.deltaTime * -speed);
-				Debug.Log (Z);
 			}
 
 			if (toMove.transform.position.z == top) {
