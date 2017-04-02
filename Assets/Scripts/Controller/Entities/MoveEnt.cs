@@ -17,11 +17,11 @@ public class MoveEnt : MonoBehaviour {
         Vector3 pos_ori = transform.position;
         if (ida >0){
             
-            transform.position = pos_ori +(Direccion*Time.deltaTime);
+            transform.position = pos_ori +(Direccion*Time.deltaTime * 0.05f);
             
         }
         if (ida <= 0){
-            transform.position = pos_ori - (Direccion * Time.deltaTime);
+            transform.position = pos_ori - (Direccion * Time.deltaTime * 0.08f);
         }
         ida--;
         if (ida <= -Desplazamiento)

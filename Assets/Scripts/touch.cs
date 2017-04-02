@@ -24,9 +24,10 @@ public class touch : MonoBehaviour {
             if(touchactual.tapCount == 2)
             {
 
+
 				if (!play) {
                     ball = GameObject.FindGameObjectWithTag("Player");
-
+					Debug.Log ("Detected");
                     Destroy(GameObject.FindGameObjectWithTag("Angle"));
 					ball.transform.parent = null;
 
