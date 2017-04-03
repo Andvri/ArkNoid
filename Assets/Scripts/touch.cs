@@ -91,19 +91,6 @@ public class touch : MonoBehaviour {
 	
 	}
 
-	float fixedAngle(float angle, float min, float max){
-		//Debug.Log (angle);
-
-		if (angle <= -360f) {
-			angle += 360;
-		}
-		if (angle > 360f) {
-			angle -= 360;
-		}
-
-		return Mathf.Clamp (angle, min, max);
-
-	}
 
 
 

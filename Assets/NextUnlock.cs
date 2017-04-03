@@ -1,0 +1,52 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NextUnlock : MonoBehaviour {
+
+	public int unlockLvl;
+
+	// Use this for initialization
+	void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	void OnCollisionEnter(Collision hit){
+		
+		switch (unlockLvl) 
+		{
+			case 0:
+			{
+				
+				GameObject[] toActivate = GameObject.FindGameObjectsWithTag ("Turret");
+				Debug.Log (toActivate.Length);
+				foreach(GameObject aux in toActivate)
+				{
+					
+					Transform [] toAct = aux.gameObject.GetComponentsInChildren<Transform>(true);
+
+					foreach (Transform finalStep in toAct) 
+					{
+						if (finalStep.childCount > 0) {
+							for (int i = 0; i < finalStep.childCount; i++) 
+							{
+								finalStep.GetChild (i).gameObject.SetActive (true);
+							}
+						}
+
+					}				
+				}
+				Destroy (this.gameObject);
+				break;
+			}		
+
+		}
+
+	}	
+
+}

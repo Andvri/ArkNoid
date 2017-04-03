@@ -2,9 +2,11 @@
 using System.Collections;
 
 public class PowerHealth : MonoBehaviour {
+	
     public int PowerHealt;
     public int Point1;
     public int PointDes;
+
 	// Use this for initialization
 	void Start () {
         PointDes = Point1 * PowerHealt;
@@ -22,10 +24,11 @@ public class PowerHealth : MonoBehaviour {
         if (PowerHealt == 0)
         {
             Destroy(gameObject);
-            (GameObject.FindWithTag("GameController").GetComponent<Score>()).increase(PointDes);
+            (GameObject.FindWithTag("GameController").GetComponent<ScoreStory>()).increase(PointDes);
+			(GameObject.FindWithTag ("GameController").GetComponent<ScoreStory> ()).incDefeated ();
             return;
         }
-        (GameObject.FindWithTag("GameController").GetComponent<Score>()).increase(Point1);
+        (GameObject.FindWithTag("GameController").GetComponent<ScoreStory>()).increase(Point1);
         
     }
 

@@ -8,6 +8,8 @@ TagManager:
   - Beam
   - PowerUp
   - Destructible Entity
+  - Unlockable
+  - Turret
   layers:
   - Default
   - TransparentFX

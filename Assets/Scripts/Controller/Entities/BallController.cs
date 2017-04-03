@@ -11,6 +11,7 @@ public class BallController : MonoBehaviour {
     private void Awake()
     {
         
+		controllerparent = GameObject.FindGameObjectWithTag ("Respawn").GetComponent<TableController> ();
         parent = transform.parent;
        
     }

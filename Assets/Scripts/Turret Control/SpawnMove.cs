@@ -13,6 +13,7 @@ public class SpawnMove : MonoBehaviour {
 	public float speed;
 	public bool XAxis;
 	public bool ZAxis;
+	public bool rotate;
 	private bool up;
 	private bool sides;
 
@@ -62,6 +63,10 @@ public class SpawnMove : MonoBehaviour {
 			}
 
 			toMove.transform.position = new Vector3 (Mathf.Clamp (X, left, right), toMove.transform.position.y, toMove.transform.position.z );
+		}
+
+		if (rotate) {
+			toMove.transform.Rotate (Vector3.up * Time.deltaTime * 50);
 		}
 
 
