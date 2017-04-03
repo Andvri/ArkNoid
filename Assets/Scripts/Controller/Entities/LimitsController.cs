@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 public class LimitsController : MonoBehaviour {
-
+    public GameObject Louse;
+    public GameObject Help;
 	// Use this for initialization
 	void Start () {
 	
@@ -28,7 +29,10 @@ public class LimitsController : MonoBehaviour {
                 table.Reset();
                 if (SceneManager.GetActiveScene().name != "StoryMode") {
                     if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().vidas == 0)
-                        Time.timeScale = 0;
+                    {
+                        Louse.SetActive(true);
+                        Destroy(Help);
+                    }  
                     else
                     {
                         GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().vidas--;

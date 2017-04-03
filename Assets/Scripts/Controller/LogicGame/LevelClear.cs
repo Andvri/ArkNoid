@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LevelClear : MonoBehaviour {
     public GameObject ClearMenu;
+    public GameObject NewRecord;
 	// Use this for initialization
 	
 	
@@ -23,6 +24,7 @@ public class LevelClear : MonoBehaviour {
             
             if (BestTime(Indestructible.GetComponent<SaveLoad>().times[pos], Tempo.GetComponent<Timer>().TiempoS()))
             {
+                NewRecord.SetActive(true);
                 Indestructible.GetComponent<SaveLoad>().times[pos] = Tempo.GetComponent<Timer>().TiempoS();
             }
             
