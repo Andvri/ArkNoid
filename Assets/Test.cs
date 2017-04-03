@@ -16,22 +16,39 @@ public class Test : MonoBehaviour {
         {
             selector = Random.Range(0f, 1f);
             
-             if (selector>=0.1 && selector < 0.5)
+             if (selector>=0.3 && selector < 0.5)
             {
                 ReScaleTable(Test.ReScalePlus);
             }
-            if (selector >= 0.5 && selector <= 1)
+            if (selector >= 0.5 && selector < 0.7)
             {
                 ReScaleTable(Test.ReScaleMinus);
             }
             
-            if ((selector >= 0 && selector < 0.1))
+            if ((selector >= 0 && selector < 0.3))
             {
                 if(GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play)
                 {
                     Pow();
                 }
             }
+            if ((selector >= 0.7 && selector < 0.85))
+            {
+                if (GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play)
+                {
+                    ReScaleBall(Test.ReScalePlus, Test.ReScaleMinus);
+                }
+            }
+            if ((selector >= 0.85 && selector <= 1))
+            {
+                if (GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play)
+                {
+                    ReScaleBall(Test.ReScaleMinus, Test.ReScalePlus);
+                }
+            }
+
+
+
             Destroy(gameObject);
         }
        
@@ -87,5 +104,17 @@ public class Test : MonoBehaviour {
 
 
     }
+    private void ReScaleBall(float ReScale,float Velocity)
+    {
+        GameObject[] balls = GameObject.FindGameObjectsWithTag("Player");
+        foreach (var ball in balls)
+        {
+            ball.transform.localScale *= ReScale;
+            ball.GetComponent<Rigidbody>().velocity *= Velocity;
+        }
+        
+    }
+
+
 
 }
