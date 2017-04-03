@@ -57,6 +57,11 @@ public class Test : MonoBehaviour {
 
          }
     }
+
+    private void SpeedBall()
+    {
+
+    }
     private void Multiplicar(GameObject ball) {
        ball.transform.localScale *= (9f/10f);
         GameObject clone1 = Instantiate(ball);

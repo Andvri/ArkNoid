@@ -2,11 +2,16 @@
 using System.Collections;
 using UnityEngine.UI;
 public class Score : MonoBehaviour {
-    public Text Num;
+    public Text score;
+    public int  puntos;
+    public int vidas;
     // Use this for initialization
     void Start()
     {
-        Num.text = "0";
+        vidas = 3;
+        puntos = 0;
+        string nue = "Score: " + puntos.ToString() + "\n♥x" + vidas.ToString();
+        score.text = nue ;
     }
 
 
@@ -17,7 +22,14 @@ public class Score : MonoBehaviour {
     }
     public void increase(int n)
     {
-        string num = Num.text;
-        Num.text = (int.Parse(num) + n).ToString();
+        puntos += n;
+        updateScore();
+        
     }
+    public void updateScore()
+    {
+        string nue = "Score: " + puntos.ToString() + "\n♥x" + vidas.ToString();
+        score.text = nue;
+    }
+    
 }

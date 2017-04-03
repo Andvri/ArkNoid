@@ -205,7 +205,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f486d1694536c74ab8bc1e0cb523c0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Num: {fileID: 1353165926}
+  score: {fileID: 1392382250}
+  puntos: 0
+  vidas: 0
 --- !u!114 &107712641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2163,12 +2165,12 @@ RectTransform:
   m_Children:
   - {fileID: 1819299567}
   m_Father: {fileID: 1091483276}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5.100006, y: -11.650024}
-  m_SizeDelta: {x: 50.899994, y: 45.700012}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 67.65, y: 71.8}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &935083828
 MonoBehaviour:
@@ -2679,7 +2681,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1392382249}
-  - {fileID: 1353165925}
   - {fileID: 1280293752}
   - {fileID: 935083827}
   m_Father: {fileID: 0}
@@ -2984,7 +2985,7 @@ RectTransform:
   m_Children:
   - {fileID: 1267211333}
   m_Father: {fileID: 1091483276}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -3192,80 +3193,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000012779704100, guid: af2435c486afb0a4580f031a59707327,
     type: 2}
   m_PrefabInternal: {fileID: 1326902769}
---- !u!1 &1353165924
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1353165925}
-  - component: {fileID: 1353165927}
-  - component: {fileID: 1353165926}
-  m_Layer: 5
-  m_Name: Num
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1353165925
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1353165924}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1091483276}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -39, y: 0}
-  m_SizeDelta: {x: 145, y: 69}
-  m_Pivot: {x: 1, y: 1}
---- !u!114 &1353165926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1353165924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: ad333e66d9fe6364cb55818c2d84c0a2, type: 3}
-    m_FontSize: 50
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 70
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 99999
---- !u!222 &1353165927
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1353165924}
 --- !u!1 &1374070062 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010415353848, guid: af2435c486afb0a4580f031a59707327,
@@ -3378,7 +3305,7 @@ GameObject:
   - component: {fileID: 1392382251}
   - component: {fileID: 1392382250}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3397,11 +3324,11 @@ RectTransform:
   m_Father: {fileID: 1091483276}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 56, y: 0}
-  m_SizeDelta: {x: 147, y: 69}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 1, y: 0}
+  m_SizeDelta: {x: 264, y: 132}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1392382250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3434,7 +3361,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score:'
+  m_Text: 
 --- !u!222 &1392382251
 CanvasRenderer:
   m_ObjectHideFlags: 0

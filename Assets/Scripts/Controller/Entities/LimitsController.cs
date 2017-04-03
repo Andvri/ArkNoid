@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.SceneManagement;
 public class LimitsController : MonoBehaviour {
 
 	// Use this for initialization
@@ -26,6 +26,16 @@ public class LimitsController : MonoBehaviour {
                 TableController table = GameObject.FindGameObjectWithTag("Respawn").GetComponent<TableController>();
                 
                 table.Reset();
+                if (SceneManager.GetActiveScene().name != "History") {
+                    if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().vidas == 0)
+                        Time.timeScale = 0;
+                    else
+                    {
+                        GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().vidas--;
+                        GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().updateScore();
+                    }
+                    
+                }
             }
 
         }
