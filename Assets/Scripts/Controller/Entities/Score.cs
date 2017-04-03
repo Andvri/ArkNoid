@@ -5,12 +5,13 @@ public class Score : MonoBehaviour {
     public Text score;
     public int  puntos;
     public int vidas;
+    public string nue;
     // Use this for initialization
     void Start()
     {
         vidas = 3;
         puntos = 0;
-        string nue = "Score: " + puntos.ToString() + "\n♥x" + vidas.ToString();
+         nue = "Score: " + puntos.ToString() + "\n♥x" + vidas.ToString();
         score.text = nue ;
     }
 
@@ -28,8 +29,16 @@ public class Score : MonoBehaviour {
     }
     public void updateScore()
     {
-        string nue = "Score: " + puntos.ToString() + "\n♥x" + vidas.ToString();
+         nue = "Score: " + puntos.ToString() + "\n♥x" + vidas.ToString();
         score.text = nue;
+    }
+    public string cad()
+    {
+        return nue;
+    }
+    public int points()
+    {
+        return puntos;
     }
     
 }

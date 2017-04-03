@@ -14,3 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ArcadeMode/L1.unity
     guid: 38bb90bae121d4841b8d7169326ceed4
+  - enabled: 1
+    path: Assets/Scenes/ArcadeMode/1.unity
+    guid: 28a61fb247d016740a5a50ee7e47b7ea
+  - enabled: 1
+    path: Assets/Scenes/ArcadeMode/2.unity
+    guid: 97501773f3bd9f14a816d9cdbf3fb853

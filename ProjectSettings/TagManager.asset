@@ -10,6 +10,8 @@ TagManager:
   - Destructible Entity
   - Unlockable
   - Turret
+  - Persisteng
+  - Timer
   layers:
   - Default
   - TransparentFX

@@ -7,8 +7,10 @@ public class Timer : MonoBehaviour {
     public float m;
     public float h;
     public Text text;
+    public string Tiempo;
     private void Awake()
     {
+        Tiempo = "";
         text = GetComponent<Text>();
     }
     // Use this for initialization
@@ -35,6 +37,11 @@ public class Timer : MonoBehaviour {
 	}
     private void UpdateTimer()
     {
-        text.text = h.ToString("00")+":"+m.ToString("00")+":"+s.ToString("00");
+        Tiempo = h.ToString("00") + ":" + m.ToString("00") + ":" + s.ToString("00");
+        text.text = Tiempo;
+    }
+    public string TiempoS()
+    {
+        return Tiempo;
     }
 }

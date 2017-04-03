@@ -25,7 +25,7 @@ public class ChangeScene : MonoBehaviour {
         SceneManager.LoadScene(SceneName);
     }
     public void L1() {
-        SceneName = "L1";
+        SceneName = "1";
         LoadScene();
     }
     public void Quit()
@@ -35,5 +35,10 @@ public class ChangeScene : MonoBehaviour {
     }
     public void backToMainScene() {
         SceneManager.LoadScene("MainScene",LoadSceneMode.Single);
+    }
+    public void changenextsceneArcade()
+    {
+        string name = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene((1+int.Parse(name)).ToString(), LoadSceneMode.Single);
     }
 }
