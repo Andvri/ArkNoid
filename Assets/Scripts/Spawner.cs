@@ -28,8 +28,8 @@ public class Spawner : MonoBehaviour {
 		currSpTime -= 1 * Time.deltaTime;
 
 		string current = (GameObject.FindWithTag ("GameController").GetComponent<ScoreStory> ()).NDes.text.ToString ();
-		Debug.Log (current);
 		int currentDestroyed = int.Parse (current);
+
 		if (currSpTime <= 0) {
 			Spawn ();
 			currSpTime = spawnTime;

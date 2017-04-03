@@ -24,11 +24,11 @@ public class PowerHealth : MonoBehaviour {
         if (PowerHealt == 0)
         {
             Destroy(gameObject);
-            (GameObject.FindWithTag("GameController").GetComponent<ScoreStory>()).increase(PointDes);
-			(GameObject.FindWithTag ("GameController").GetComponent<ScoreStory> ()).incDefeated ();
+            (GameObject.FindWithTag("GameController").GetComponent<Score>()).increase(PointDes);
+		
             return;
         }
-        (GameObject.FindWithTag("GameController").GetComponent<ScoreStory>()).increase(Point1);
+        (GameObject.FindWithTag("GameController").GetComponent<Score>()).increase(Point1);
         
     }
 

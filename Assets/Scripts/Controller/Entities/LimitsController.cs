@@ -26,7 +26,7 @@ public class LimitsController : MonoBehaviour {
                 TableController table = GameObject.FindGameObjectWithTag("Respawn").GetComponent<TableController>();
                 
                 table.Reset();
-                if (SceneManager.GetActiveScene().name != "History") {
+                if (SceneManager.GetActiveScene().name != "StoryMode") {
                     if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().vidas == 0)
                         Time.timeScale = 0;
                     else

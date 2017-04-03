@@ -2732,7 +2732,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b06f450598db43942a5afe6a50d3c261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blocks: {fileID: 1000010400257652, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
+  blocks: {fileID: 1887804112257864, guid: 7a7f09573dc30044a948faf6813ccf1b, type: 2}
   powerUps: {fileID: 1000010415353848, guid: af2435c486afb0a4580f031a59707327, type: 2}
   gameControl:
   - {fileID: 968741149}
