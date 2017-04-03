@@ -9,7 +9,7 @@ public class Score : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        vidas = 1;
+        vidas = 10;
         puntos = 0;
          nue = "Score: " + puntos.ToString() + "\n♥x" + vidas.ToString();
         score.text = nue ;
