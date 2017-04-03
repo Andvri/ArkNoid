@@ -7,13 +7,14 @@ public class ChangeScene : MonoBehaviour {
 
     public void Awake()
     {
+       
         SceneName = "Level1";
         time = 0.5f;
     }
     // Use this for initialization
     void Start () {
-	
-	}
+        Time.timeScale = 1;
+    }
    
     public void LoadScene() {
         Invoke("_ChangeScene", time);
@@ -31,5 +32,8 @@ public class ChangeScene : MonoBehaviour {
     {
         Application.Quit();
         Debug.Log("Sali de la app");
+    }
+    public void backToMainScene() {
+        SceneManager.LoadScene("MainScene",LoadSceneMode.Single);
     }
 }
