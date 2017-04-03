@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class NextUnlock : MonoBehaviour {
 
+	public Spawner[] spawns;
 	public int unlockLvl;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -41,7 +41,10 @@ public class NextUnlock : MonoBehaviour {
 
 					}				
 				}
-				Destroy (this.gameObject);
+
+
+				spawns[Spawner.currentPoint].spawnPoints[Spawner.currentPoint].SetActive (true);
+				spawns[Spawner.currentPoint].gameControl[Spawner.currentBox].SetActive(false);
 				break;
 			}		
 

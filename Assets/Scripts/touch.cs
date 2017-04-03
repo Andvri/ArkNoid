@@ -28,7 +28,7 @@ public class touch : MonoBehaviour {
 				if (!play) {
                     ball = GameObject.FindGameObjectWithTag("Player");
 					Debug.Log ("Detected");
-                    Destroy(GameObject.FindGameObjectWithTag("Angle"));
+					GameObject.FindGameObjectWithTag("Angle").SetActive(false);
 					ball.transform.parent = null;
 
 					Rigidbody BallRB = ball.GetComponent<Rigidbody> ();

@@ -348,16 +348,25 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 301149331}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b06f450598db43942a5afe6a50d3c261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blocks: {fileID: 1000010400257652, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
+  blocks: {fileID: 1887804112257864, guid: 7a7f09573dc30044a948faf6813ccf1b, type: 2}
   powerUps: {fileID: 1000010415353848, guid: af2435c486afb0a4580f031a59707327, type: 2}
-  gameControl: []
+  spawnPoints:
+  - {fileID: 1633078035}
+  - {fileID: 301149331}
+  gameControl:
+  - {fileID: 968741149}
+  - {fileID: 968741149}
+  - {fileID: 968741149}
+  - {fileID: 968741149}
+  - {fileID: 968741149}
+  - {fileID: 968741149}
   spawnTime: 0
-  spawnMode: 0
+  spawnMode: 1
 --- !u!114 &301149333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1360,6 +1369,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af1f2cfb8002736449c4d821d7831478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawns:
+  - {fileID: 1633078038}
+  - {fileID: 301149332}
   unlockLvl: 0
 --- !u!1 &1023780139
 GameObject:
@@ -2734,6 +2746,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blocks: {fileID: 1887804112257864, guid: 7a7f09573dc30044a948faf6813ccf1b, type: 2}
   powerUps: {fileID: 1000010415353848, guid: af2435c486afb0a4580f031a59707327, type: 2}
+  spawnPoints:
+  - {fileID: 1633078035}
+  - {fileID: 301149331}
   gameControl:
   - {fileID: 968741149}
   - {fileID: 968741149}
