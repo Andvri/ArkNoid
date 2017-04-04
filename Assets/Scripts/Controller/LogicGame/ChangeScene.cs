@@ -22,10 +22,10 @@ public class ChangeScene : MonoBehaviour {
 
     public void _ChangeScene()
     {
-        SceneManager.LoadScene(SceneName);
+        SceneManager.LoadSceneAsync(SceneName);
     }
     public void L1() {
-        SceneName = "1";
+        SceneName = "LoadingScene";
         LoadScene();
     }
     public void Quit()
@@ -34,7 +34,7 @@ public class ChangeScene : MonoBehaviour {
         Debug.Log("Sali de la app");
     }
     public void backToMainScene() {
-        SceneManager.LoadScene("MainScene",LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("MainScene",LoadSceneMode.Single);
     }
     public void changenextsceneArcade()
     {

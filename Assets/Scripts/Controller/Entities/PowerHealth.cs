@@ -6,7 +6,8 @@ public class PowerHealth : MonoBehaviour {
     public int PowerHealt;
     public int Point1;
     public int PointDes;
-
+    [Header("Explosion Particle")]
+    public GameObject Explo;
 	// Use this for initialization
 	void Start () {
         PointDes = Point1 * PowerHealt;
@@ -23,6 +24,13 @@ public class PowerHealth : MonoBehaviour {
         PowerHealt--;
         if (PowerHealt == 0)
         {
+            
+            if (Explo != null)
+            {
+                var al=Instantiate(Explo);
+                al.transform.position = transform.position;
+                
+            }
             Destroy(gameObject);
             (GameObject.FindWithTag("GameController").GetComponent<Score>()).increase(PointDes);
 		
