@@ -91,6 +91,8 @@ public class FloatingMenu : MonoBehaviour {
         {
             nuevoText += ((i+1)+")\t"+ltimes[i]+"\t"+lscores[i]+"\n");
         }
+        nuevoText += "Survival\nTime\tScore\n";
+        nuevoText += (ltimes[10] + "\t" + lscores[10] + "\n");
         RecordText.text = nuevoText;
         Debug.Log(nuevoText);
     }

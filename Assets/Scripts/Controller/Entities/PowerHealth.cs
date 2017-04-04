@@ -6,6 +6,7 @@ public class PowerHealth : MonoBehaviour {
     public int PowerHealt;
     public int Point1;
     public int PointDes;
+    public AudioSource Sound;
     [Header("Explosion Particle")]
     public GameObject Explo;
 	// Use this for initialization
@@ -22,6 +23,11 @@ public class PowerHealth : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         PowerHealt--;
+        if(Sound != null)
+        {
+            Debug.Log("Orale Guerito");
+            Sound.Play();
+        }
         if (PowerHealt == 0)
         {
             

@@ -233,6 +233,7 @@ MonoBehaviour:
   PowerHealt: 5
   Point1: 5
   PointDes: 0
+  Sound: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!23 &98940360
 MeshRenderer:
@@ -247,7 +248,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cb05ade57d7935546bd4c59cffc1990b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1560,6 +1561,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -1981,6 +1987,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -2435,6 +2446,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -3046,6 +3062,7 @@ MonoBehaviour:
   PowerHealt: 3
   Point1: 5
   PointDes: 0
+  Sound: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!23 &953620222
 MeshRenderer:
@@ -3060,7 +3077,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cb05ade57d7935546bd4c59cffc1990b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3159,6 +3176,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -3215,6 +3237,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -3386,6 +3413,7 @@ MonoBehaviour:
   PowerHealt: 5
   Point1: 5
   PointDes: 0
+  Sound: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!23 &1060948262
 MeshRenderer:
@@ -3400,7 +3428,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cb05ade57d7935546bd4c59cffc1990b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3640,6 +3668,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -4040,6 +4073,7 @@ MonoBehaviour:
   PowerHealt: 5
   Point1: 5
   PointDes: 0
+  Sound: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!23 &1278175025
 MeshRenderer:
@@ -4054,7 +4088,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cb05ade57d7935546bd4c59cffc1990b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5345,6 +5379,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -5475,6 +5514,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -5852,6 +5896,7 @@ MonoBehaviour:
   PowerHealt: 3
   Point1: 5
   PointDes: 0
+  Sound: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!23 &1817096565
 MeshRenderer:
@@ -5866,7 +5911,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cb05ade57d7935546bd4c59cffc1990b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6039,6 +6084,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -6212,6 +6262,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -6263,6 +6318,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -6319,6 +6379,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -6370,6 +6435,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -6704,6 +6774,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
@@ -6760,6 +6835,11 @@ Prefab:
       propertyPath: PowerHealt
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 23000010655296742, guid: 8db00ee4d8223624da68090f8c4e04a1,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77c8b250748a8324285786b98b84023f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
   m_IsPrefabParent: 0
