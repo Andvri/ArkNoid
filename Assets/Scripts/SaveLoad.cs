@@ -62,9 +62,9 @@ public class SaveLoad : MonoBehaviour {
 
         }else
         {
-            scores.Add(0);
+            
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 11; i++)
             {
                 times.Add("00:00:00");
                 scores.Add(0);
@@ -109,11 +109,11 @@ class Arcade_Data {
     public Arcade_Data() {
         Times = new List<string>();
         Scores = new List<int>();
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 11; i++)
         {
            this.Times.Add("00:00:00");
             Scores.Add(0);
         }
-        Scores.Add(0);
+       
     }
 };
