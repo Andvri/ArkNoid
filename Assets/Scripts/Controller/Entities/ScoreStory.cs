@@ -25,6 +25,10 @@ public class ScoreStory : MonoBehaviour {
 		string num = Num.text;
 		Num.text = (int.Parse(num) + n).ToString();	
 	}
+    public int Score()
+    {
+        return int.Parse(Num.text);
+    }
 
 	public void incDefeated(){
 		NDes.text = (int.Parse (NDes.text) + 1).ToString ();
