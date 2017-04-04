@@ -6016,6 +6016,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unlockLvl: 1
+--- !u!1001 &1650133442
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4741976798088176, guid: fcb02e0aa31724447bb511f45be323e0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741976798088176, guid: fcb02e0aa31724447bb511f45be323e0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741976798088176, guid: fcb02e0aa31724447bb511f45be323e0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741976798088176, guid: fcb02e0aa31724447bb511f45be323e0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741976798088176, guid: fcb02e0aa31724447bb511f45be323e0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741976798088176, guid: fcb02e0aa31724447bb511f45be323e0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741976798088176, guid: fcb02e0aa31724447bb511f45be323e0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741976798088176, guid: fcb02e0aa31724447bb511f45be323e0, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fcb02e0aa31724447bb511f45be323e0, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1658160652
 GameObject:
   m_ObjectHideFlags: 0
@@ -7132,8 +7174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7110b53ad21b4f243a801514ebc261c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clip1: {fileID: 8300000, guid: d68c3d73d3fd1ca449e757612a5d161e, type: 3}
-  clip2: {fileID: 8300000, guid: 586ddd09be50cfe42b576a09538f4152, type: 3}
+  clip1: {fileID: 8300000, guid: bb6d2a90933c03e4cb7232bc651f8343, type: 3}
+  clip2: {fileID: 8300000, guid: bb6d2a90933c03e4cb7232bc651f8343, type: 3}
 --- !u!82 &2072270050
 AudioSource:
   m_ObjectHideFlags: 0

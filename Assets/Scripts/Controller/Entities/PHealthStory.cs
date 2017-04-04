@@ -27,6 +27,19 @@ public class PHealthStory : MonoBehaviour {
 			currentH.text = textH;
 			if (PowerHealt <= 0 && this.gameObject.tag == "Respawn") {
 				Debug.Log ("GameOver");
+                /*
+                 
+                 */
+                int scoreact = GameObject.FindWithTag("GameController").GetComponent<ScoreStory>().Score();
+                int scoresave = GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().scores[10];
+                 if (scoreact>=scoresave)
+                {
+                    GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().scores[10] = scoreact;
+                    GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().times[10] = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>().TiempoS();
+                }
+
+
+
 				Time.timeScale = 0;
 				this.gameObject.SetActive (false);
 				GameObject.Find("Limits").GetComponent<LimitsController>().Louse.SetActive(true);
