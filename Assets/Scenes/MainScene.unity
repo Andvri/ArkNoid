@@ -5133,9 +5133,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Neptali Duqye
+  m_Text: 'Neptali Duque
 
-    Javier Martinez'
+    V-24.355.188
+
+    Javier Martinez
+
+    V-24.338.432'
 --- !u!222 &1674135010
 CanvasRenderer:
   m_ObjectHideFlags: 0

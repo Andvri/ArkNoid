@@ -3855,11 +3855,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013780591158, guid: 8db00ee4d8223624da68090f8c4e04a1,
-        type: 2}
-      propertyPath: PowerHealt
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1000010400257652, guid: 8db00ee4d8223624da68090f8c4e04a1, type: 2}
       propertyPath: m_Name
       value: Block (7)
