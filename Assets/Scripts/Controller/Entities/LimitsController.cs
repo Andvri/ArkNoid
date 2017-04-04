@@ -4,7 +4,11 @@ using UnityEngine.SceneManagement;
 public class LimitsController : MonoBehaviour {
     public GameObject Louse;
     public GameObject Help;
+<<<<<<< HEAD
     public float time;
+=======
+
+>>>>>>> origin/master
 	// Use this for initialization
 	void Start () {
         time = 1f;
@@ -29,18 +33,27 @@ public class LimitsController : MonoBehaviour {
             Destroy(other.gameObject);
             
 			GameObject[] balls = GameObject.FindGameObjectsWithTag("Player");
+<<<<<<< HEAD
 
 			if (GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ()) {
 				GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ().DecreaseHealth ();
 			}
 
             if (balls.Length == 0)
+=======
+		
+            if (balls.Length == 1)
+>>>>>>> origin/master
             {
+				if (GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ()) {
+					GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ().DecreaseHealth ();
+				}
                 TableController table = GameObject.FindGameObjectWithTag("Respawn").GetComponent<TableController>();
 				if (SceneManager.GetActiveScene ().name != "Testing") {
 					GameObject.FindGameObjectWithTag ("Persisteng").GetComponent<SaveLoad> ().DeathPlay ();
 				}
                 table.Reset();
+
                 if (SceneManager.GetActiveScene().name != "Testing") {
                     if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().vidas == 0)
                     {

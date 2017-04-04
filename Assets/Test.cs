@@ -12,7 +12,7 @@ public class Test : MonoBehaviour {
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == GameObject.FindGameObjectWithTag("Respawn"))
+		if(other.gameObject == GameObject.FindGameObjectWithTag("Respawn") || other.gameObject == GameObject.FindGameObjectWithTag("Player"))
         {
             selector = Random.Range(0f, 1f);
             

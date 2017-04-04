@@ -22,13 +22,11 @@ public class touch : MonoBehaviour {
         foreach (var touchactual in Input.touches)
         {
             if(touchactual.tapCount == 2)
-            {
-
-
+            {				
 				if (!play && ball) {
                     ball = GameObject.FindGameObjectWithTag("Player");
 					Debug.Log ("Detected");
-					GameObject.FindGameObjectWithTag("Angle").SetActive(false);
+					GameObject.FindGameObjectWithTag("Angle").gameObject.SetActive(false);
 					ball.transform.parent = null;
 
 					Rigidbody BallRB = ball.GetComponent<Rigidbody> ();
