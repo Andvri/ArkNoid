@@ -41,3 +41,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ArcadeMode/10.unity
     guid: 42306cdbd3f18e84ba3489d9b1a8c294
+  - enabled: 1
+    path: Assets/Scenes/HistoryMode/Testing.unity
+    guid: 673b08b5c637559468d18c8ce672baf4

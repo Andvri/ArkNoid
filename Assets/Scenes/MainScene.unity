@@ -443,7 +443,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1299818760}
-        m_MethodName: LoadScene
+        m_MethodName: starSurvival
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -66,8 +66,12 @@ public class ChangeScene : MonoBehaviour {
     }
     public void starArcade()
     {
-
         GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().SceneToLoad = "1";
+        L1();
+    }
+    public void starSurvival()
+    {
+        GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().SceneToLoad = "Testing";
         L1();
     }
 }
