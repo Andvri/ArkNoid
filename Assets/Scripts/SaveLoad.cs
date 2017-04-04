@@ -13,6 +13,9 @@ public class SaveLoad : MonoBehaviour {
     public List<string> times;
     public List<int> scores;
     public string pathArcade;
+    [Header("Sounds")]
+    public AudioSource MissionComplete;
+    public AudioSource Death;
     // Use this for initialization
     private void Awake()
     {
@@ -87,6 +90,14 @@ public class SaveLoad : MonoBehaviour {
         file.Dispose();
         file.Close();
 
+    }
+    public void MissionCompletePlay()
+    {
+        MissionComplete.Play();
+    }
+    public void DeathPlay()
+    {
+        Death.Play();
     }
 }
 

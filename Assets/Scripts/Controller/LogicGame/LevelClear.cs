@@ -13,6 +13,7 @@ public class LevelClear : MonoBehaviour {
         GameObject[] vDestructibleEntity = GameObject.FindGameObjectsWithTag("Destructible Entity");
         if (vDestructibleEntity.Length == 0)
         {
+            GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().MissionCompletePlay();
             //Time.timeScale = 0;
             ClearMenu.SetActive(true);
             string name = SceneManager.GetActiveScene().name;
@@ -21,7 +22,7 @@ public class LevelClear : MonoBehaviour {
             GameObject GameMaster = GameObject.FindGameObjectWithTag("GameController");
             GameObject Tempo = GameObject.FindGameObjectWithTag("Timer");
             Indestructible.GetComponent<SaveLoad>().scores[pos] = GameMaster.GetComponent<Score>().points();
-            
+           
             if (BestTime(Indestructible.GetComponent<SaveLoad>().times[pos], Tempo.GetComponent<Timer>().TiempoS()))
             {
                 NewRecord.SetActive(true);

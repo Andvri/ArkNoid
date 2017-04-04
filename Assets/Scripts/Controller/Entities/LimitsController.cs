@@ -25,7 +25,7 @@ public class LimitsController : MonoBehaviour {
             if (balls.Length == 1)
             {
                 TableController table = GameObject.FindGameObjectWithTag("Respawn").GetComponent<TableController>();
-                
+                GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().DeathPlay();
                 table.Reset();
                 if (SceneManager.GetActiveScene().name != "StoryMode") {
                     if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().vidas == 0)

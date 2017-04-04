@@ -7,6 +7,8 @@ public class BallController : MonoBehaviour {
     public touch sta;
     private Transform parent;
     public TableController controllerparent;
+    public AudioSource Rebote;
+    public AudioSource Point;
     // Use this for initialization
     private void Awake()
     {
@@ -43,7 +45,10 @@ public class BallController : MonoBehaviour {
         //if (collision.gameObject.CompareTag("Respawn")){
             GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(GetComponent<Rigidbody>().velocity*1.2f,30);
         //}
-            
+        if (!collision.gameObject.CompareTag("Destructible Entity"))
+            Rebote.Play();
+        else
+            Point.Play();
     }
 
 
