@@ -7,6 +7,8 @@ public class PHealthStory : MonoBehaviour {
 	public int PowerHealt;
 	public int Point1;
 	public int PointDes;
+	[Header("Explosion Particle")]
+	public GameObject Explo;
 	private int powerAux;
 
 	// Use this for initialization
@@ -26,6 +28,12 @@ public class PHealthStory : MonoBehaviour {
 		PowerHealt--;
 		if (PowerHealt == 0)
 		{
+			if (Explo != null)
+			{
+				var al=Instantiate(Explo);
+				al.transform.position = transform.position;
+
+			}
 			if (this.gameObject.tag != "Bosses" && this.gameObject.tag != "SubBoss") {
 				Destroy (gameObject);
 				(GameObject.FindWithTag("GameController").GetComponent<ScoreStory>()).increase(PointDes);

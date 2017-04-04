@@ -108,3 +108,4 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  Explo: {fileID: 1587816782782250, guid: d95eadbe0f286ad49a0208442e757bc4, type: 2}

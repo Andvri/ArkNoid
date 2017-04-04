@@ -667,8 +667,8 @@ PlayerSettings:
     Unity_Ads: 0
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 4d6b8815-b13d-4b7a-a518-2128a0826585
-  projectName: ArkNoid
-  organizationId: jmrtz16
+  cloudProjectId: 
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNewInputSystem: 0

@@ -21,7 +21,7 @@ public class SpawnerController : MonoBehaviour {
 	private 
 	// Use this for initialization
 	void Start () {
-		limit = 1;	
+		limit = 9;	
 		bossFight = false;
 		currentBox = 0;
 		currentPoint = 0;
@@ -78,7 +78,7 @@ public class SpawnerController : MonoBehaviour {
 							
 			}
 			continueLimit = true;
-			limit += 1;
+			limit += 9;
 		}
 
 		if (bossFight) {

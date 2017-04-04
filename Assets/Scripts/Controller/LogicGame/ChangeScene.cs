@@ -29,6 +29,9 @@ public class ChangeScene : MonoBehaviour {
         SceneName = "LoadingScene";
         LoadScene();
     }
+	public void Restart(){
+		SceneManager.LoadSceneAsync("Testing",LoadSceneMode.Single);
+	}
     public void Quit()
     {
         Application.Quit();
