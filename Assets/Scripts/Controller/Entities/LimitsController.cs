@@ -35,6 +35,7 @@ public class LimitsController : MonoBehaviour {
                     }  
                     else
                     {
+                        GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().Vidas--;
                         GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().vidas--;
                         GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().updateScore();
                     }

@@ -9,7 +9,12 @@ public class Score : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        vidas = 10;
+        vidas = GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().GetVidas();
+        if (vidas == 0)
+        {
+            GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().Vidas = 10;
+            vidas = 10;
+        }
         puntos = 0;
          nue = "Score: " + puntos.ToString() + "\n♥x" + vidas.ToString();
         score.text = nue ;

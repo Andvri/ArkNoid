@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour {
     public string SceneName;
+    
     public float time;
 
     public void Awake()
@@ -40,8 +41,33 @@ public class ChangeScene : MonoBehaviour {
     {
         string name = SceneManager.GetActiveScene().name;
         int numescene = int.Parse(name);
+        
         if (numescene >= 10)
+        {
             numescene = 0;
+        }
+        else if ((GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().SelectionLevel && (GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().times[numescene] == "00:00:00")))
+            {
+                numescene = 0;
+            }
+        
         SceneManager.LoadScene((1+numescene).ToString(), LoadSceneMode.Single);
+    }
+    public void selectscene(int opc)
+    {
+        if (opc != 0)
+        {
+            GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().SelectionLevel = true;
+            GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().SceneToLoad = opc.ToString();
+            L1();
+            
+        }
+        
+    }
+    public void starArcade()
+    {
+
+        GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().SceneToLoad = "1";
+        L1();
     }
 }

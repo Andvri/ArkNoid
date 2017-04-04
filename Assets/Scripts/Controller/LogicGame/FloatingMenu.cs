@@ -8,19 +8,39 @@ public class FloatingMenu : MonoBehaviour {
     public GameObject playMenu;
     public GameObject credits;
     public GameObject Records;
+    public GameObject SeleccionLevel;
+    public GameObject FloatingSelectLevel;
     public Text RecordText;
-
+    public Dropdown Drow;
 
 
 	// Use this for initialization
 	void Start () {
-	
+        GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().Vidas = 100;
+        GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().SelectionLevel = false;
+
+        if (GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().Exist())
+        {
+            List<string> opc = new List<string>();
+            for (int i = 0; i < 10; i++)
+            {
+                if (GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().times[i] != "00:00:00")
+                    opc.Add((i + 1).ToString());
+            }
+            Drow.AddOptions(opc);
+        }
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+        if (GameObject.FindGameObjectWithTag("Persisteng").GetComponent<SaveLoad>().times[0] != "00:00:00")
+        {
+            SeleccionLevel.SetActive(true);
+            
+        }
 	}
+
+   
     public void starPlayMenu()
     {
         playMenu.SetActive(true);
@@ -51,7 +71,13 @@ public class FloatingMenu : MonoBehaviour {
     {
         Records.SetActive(false);
     }
-
+    public void exitSelectLevel() {
+        FloatingSelectLevel.SetActive(false);
+    } 
+    public void starSelectLevel()
+    {
+        FloatingSelectLevel.SetActive(true);
+    }
     public void UpdateRecords()
     {
         GameObject Data = GameObject.FindGameObjectWithTag("Persisteng");

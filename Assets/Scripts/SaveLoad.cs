@@ -6,15 +6,17 @@ using System.IO;
 using UnityEngine;
 
 public class SaveLoad : MonoBehaviour {
+    public bool SelectionLevel;
+    public string SceneToLoad;
+    public int Vidas;
     public static SaveLoad saveload;
     public List<string> times;
     public List<int> scores;
-    
-
     public string pathArcade;
     // Use this for initialization
     private void Awake()
     {
+
         times = new List<string>();
         scores = new List<int>();
         if (saveload == null)
@@ -29,13 +31,18 @@ public class SaveLoad : MonoBehaviour {
         pathArcade = Application.persistentDataPath + "/ArcadeData.dat";
         Debug.Log(pathArcade);
     }
+    
     void Start () {
+        SceneToLoad = "MainScene";
         Load();
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
+    public int GetVidas()
+    {
+        return (SelectionLevel) ? 10 : Vidas;
+    }
+    // Update is called once per frame
+    void Update () {
 		
 	}
     public void Load()
@@ -64,7 +71,10 @@ public class SaveLoad : MonoBehaviour {
         }
         
     }
-
+    public bool Exist()
+    {
+        return File.Exists(pathArcade);
+    }
     public void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
