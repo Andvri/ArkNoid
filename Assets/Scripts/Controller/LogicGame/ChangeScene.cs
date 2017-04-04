@@ -8,7 +8,7 @@ public class ChangeScene : MonoBehaviour {
     public void Awake()
     {
        
-        SceneName = "Level1";
+        SceneName = "1";
         time = 0.5f;
     }
     // Use this for initialization
@@ -39,6 +39,9 @@ public class ChangeScene : MonoBehaviour {
     public void changenextsceneArcade()
     {
         string name = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene((1+int.Parse(name)).ToString(), LoadSceneMode.Single);
+        int numescene = int.Parse(name);
+        if (numescene >= 10)
+            numescene = 0;
+        SceneManager.LoadScene((1+numescene).ToString(), LoadSceneMode.Single);
     }
 }
