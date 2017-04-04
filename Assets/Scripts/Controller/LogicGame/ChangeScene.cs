@@ -10,7 +10,7 @@ public class ChangeScene : MonoBehaviour {
     {
        
         SceneName = "1";
-        time = 0.5f;
+        time = 0.05f;
     }
     // Use this for initialization
     void Start () {

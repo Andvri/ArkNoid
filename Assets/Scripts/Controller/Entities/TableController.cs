@@ -50,7 +50,7 @@ public class TableController : MonoBehaviour {
         transform.position = Vector3.zero;
         transform.localScale = Vector3.one;
        
-        if (GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play != false)
+      if (GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play != false)
         {
            instatiate();
         }
