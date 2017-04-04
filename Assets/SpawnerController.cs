@@ -45,7 +45,7 @@ public class SpawnerController : MonoBehaviour {
 			continueLimit = false;
 			Debug.Log ("Current Spawn:"+currentPoint);
 			spawners[currentPoint].gameObject.SetActive (false);
-			currentPoint = (currentPoint + 1 < spawners.Length) ? currentPoint+1 : 0; 
+			currentPoint = (currentPoint + 1 < spawners.Length-1) ? currentPoint+1 : 0; 
 
 			GameObject[] remains = GameObject.FindGameObjectsWithTag ("Destructible Entity");
 			foreach(GameObject remaining in remains){
@@ -74,6 +74,7 @@ public class SpawnerController : MonoBehaviour {
 				Debug.Log ("Change Course Spawn:"+currentPoint);
 				Debug.Log("Spawner Active? "+spawners [currentPoint].gameObject.activeSelf);	
 				SpawnBoss ();
+				spawners [spawners.Length - 1].gameObject.SetActive (true);
 				SpawnerController.bossFight = true;
 							
 			}
@@ -88,9 +89,13 @@ public class SpawnerController : MonoBehaviour {
 				if (bosses [currentBoss].GetComponent<PHealthStory> ().PowerHealt == 0) {
 					bossFight = false;
 					continueLimit = true;
-								
+					spawners [spawners.Length - 1].gameObject.SetActive (false);			
 					spawners [currentPoint].gameObject.SetActive (true);
 					currentBoss = (currentBoss + 1 < bosses.Length) ? currentBoss + 1 : 0;		
+					GameObject[] remains = GameObject.FindGameObjectsWithTag ("PowerUp");
+					foreach(GameObject remaining in remains){
+						Destroy (remaining);
+					}
 				}
 
 			} else {
@@ -99,6 +104,11 @@ public class SpawnerController : MonoBehaviour {
 				//Debug.Log (ZuH.Length);
 
 				if (ZuH.Length == 0) {
+					spawners [spawners.Length - 1].gameObject.SetActive (false);
+					GameObject[] remains = GameObject.FindGameObjectsWithTag ("PowerUp");
+					foreach(GameObject remaining in remains){
+						Destroy (remaining);
+					}
 					removeBoss ();	
 					currentBoss = 0;
 					currentBox = 0;

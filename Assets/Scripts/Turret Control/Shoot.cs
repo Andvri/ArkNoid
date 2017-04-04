@@ -22,6 +22,13 @@ public class Shoot : MonoBehaviour {
 		if(col.gameObject == GameObject.FindGameObjectWithTag("Respawn") || col.gameObject == GameObject.FindGameObjectWithTag("Player")){
 			if (GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ()) {
 				GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ().DecreaseHealth ();
+				GameObject Explo = GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ().Explo.gameObject;
+				if (Explo != null)
+				{
+					var al=Instantiate(Explo);
+					al.transform.position = transform.position;
+
+				}
 			}
 		}
 
