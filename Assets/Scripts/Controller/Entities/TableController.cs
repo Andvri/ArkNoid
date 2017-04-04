@@ -44,6 +44,20 @@ public class TableController : MonoBehaviour {
         
         GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play = false;
     }
+
+    public void Reset2()
+    {
+        transform.position = Vector3.zero;
+        transform.localScale = Vector3.one;
+       
+        if (GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play != false)
+        {
+           instatiate();
+        }
+
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<touch>().play = false;
+    }
+
     public Object instatiate()
     {
         return Instantiate(prePlayer,player0.transform);
