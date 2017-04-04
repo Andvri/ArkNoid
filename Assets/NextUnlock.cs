@@ -30,7 +30,13 @@ public class NextUnlock : MonoBehaviour {
 					aux.transform.Find ("h2").gameObject.SetActive (false);
 					GameObject finalAct = aux.transform.Find ("Cruz").gameObject;
 					finalAct.SetActive (true);
-					finalAct.GetComponent<RandomDirection> ().move = true;
+
+					if (finalAct.GetComponent<RandomDirection> ()) {
+						finalAct.GetComponent<RandomDirection> ().move = true;
+					}
+					if (finalAct.GetComponent<SpawnMove> ()) {
+						finalAct.GetComponent<SpawnMove> ().XAxis = true;
+					}
 
 
 				}

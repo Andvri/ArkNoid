@@ -127,6 +127,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &25367514 stripped
 GameObject:
@@ -152,6 +153,7 @@ MonoBehaviour:
   PowerHealt: 5
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &25367522
 MonoBehaviour:
@@ -192,6 +194,7 @@ MonoBehaviour:
   PowerHealt: 3
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &40530008 stripped
 GameObject:
@@ -212,6 +215,7 @@ MonoBehaviour:
   PowerHealt: 3
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &40845329
 GameObject:
@@ -327,7 +331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -30.9, y: -89.7}
+  m_AnchoredPosition: {x: -30.900024, y: -89.7}
   m_SizeDelta: {x: 254.6, y: 69}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &83647650
@@ -584,6 +588,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1001 &157226241
 Prefab:
@@ -682,6 +687,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &188479105
 GameObject:
@@ -713,7 +719,7 @@ RectTransform:
   m_Children:
   - {fileID: 577117318}
   m_Father: {fileID: 2095389371}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -828,7 +834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turret: {fileID: 216747514}
-  target: {fileID: 1746447647}
+  targetRD: {fileID: 1746447647}
+  targetSM: {fileID: 0}
   laser: {fileID: 1235374154}
 --- !u!23 &216747517
 MeshRenderer:
@@ -965,6 +972,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &233370118 stripped
 GameObject:
@@ -985,6 +993,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &247843640
 GameObject:
@@ -1016,6 +1025,82 @@ Transform:
   m_Father: {fileID: 481251114}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &281693920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 281693921}
+  - component: {fileID: 281693923}
+  - component: {fileID: 281693922}
+  m_Layer: 5
+  m_Name: NHea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &281693921
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281693920}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2095389371}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 199.09999, y: -89.70001}
+  m_SizeDelta: {x: 254.6, y: 69}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &281693922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281693920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ad333e66d9fe6364cb55818c2d84c0a2, type: 3}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 70
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '0
+
+'
+--- !u!222 &281693923
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 281693920}
 --- !u!1 &326554937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1228,7 @@ MonoBehaviour:
   PowerHealt: 5
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &389899774
 MonoBehaviour:
@@ -1433,6 +1519,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 1
+--- !u!114 &421604443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421604435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1dd8497d2c9b584ca37121f179dea0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PowerHealt: 100
+  Point1: 0
+  PointDes: 0
+  currentH: {fileID: 281693922}
+  Explo: {fileID: 1587816782782250, guid: d95eadbe0f286ad49a0208442e757bc4, type: 2}
 --- !u!1 &435225392 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000011987626030, guid: 9087458320002f14aa82efc9c4065341,
@@ -1452,6 +1554,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &439876314
 GameObject:
@@ -1483,7 +1586,7 @@ RectTransform:
   m_Children:
   - {fileID: 1272445128}
   m_Father: {fileID: 2095389371}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1583,7 +1686,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2095389371}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1664,6 +1767,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &481251113
 GameObject:
@@ -2019,6 +2123,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &577117317
 GameObject:
@@ -2121,6 +2226,7 @@ MonoBehaviour:
   PowerHealt: 3
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &617976189
 GameObject:
@@ -2248,6 +2354,7 @@ MonoBehaviour:
   PowerHealt: 3
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &676321215
 GameObject:
@@ -2277,7 +2384,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2095389371}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2342,6 +2449,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &762833249
 GameObject:
@@ -2402,7 +2510,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2095389371}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -2467,6 +2575,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &823257472 stripped
 GameObject:
@@ -2487,6 +2596,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &852410157 stripped
 GameObject:
@@ -2507,6 +2617,7 @@ MonoBehaviour:
   PowerHealt: 3
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &864460463 stripped
 GameObject:
@@ -2527,6 +2638,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &866590598
 GameObject:
@@ -2820,6 +2932,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &933672604
 GameObject:
@@ -2871,6 +2984,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &950145154
 GameObject:
@@ -3060,6 +3174,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &990396557 stripped
 GameObject:
@@ -3080,6 +3195,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &992106576 stripped
 GameObject:
@@ -3100,6 +3216,7 @@ MonoBehaviour:
   PowerHealt: 3
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &1057356467
 GameObject:
@@ -3194,6 +3311,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &1095525461
 GameObject:
@@ -3238,8 +3356,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d225094e6d08194b87fda6cd00a18de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Louse: {fileID: 0}
-  Help: {fileID: 0}
+  Louse: {fileID: 188479105}
+  Help: {fileID: 1272982612}
 --- !u!23 &1095525464
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3310,6 +3428,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1001 &1112106396
 Prefab:
@@ -3652,6 +3771,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1001 &1178670752
 Prefab:
@@ -3873,6 +3993,7 @@ MonoBehaviour:
   PowerHealt: 6
   Point1: 10
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &1178670763
 MonoBehaviour:
@@ -3888,6 +4009,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &1178670764
 MonoBehaviour:
@@ -3903,6 +4025,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &1178670765
 MonoBehaviour:
@@ -3918,6 +4041,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &1178670766
 MonoBehaviour:
@@ -3933,6 +4057,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &1178670767
 MonoBehaviour:
@@ -3948,6 +4073,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &1178670768
 MonoBehaviour:
@@ -3963,6 +4089,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &1178670769
 MonoBehaviour:
@@ -3978,6 +4105,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &1178670770
 MonoBehaviour:
@@ -3993,6 +4121,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!4 &1178670771 stripped
 Transform:
@@ -4075,8 +4204,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1196345084}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 15.2, y: 0, z: 37.5}
-  m_LocalScale: {x: 0.9654072, y: 2.8653872, z: 1}
+  m_LocalPosition: {x: 15, y: 0, z: 37.3}
+  m_LocalScale: {x: 1.9, y: 2.8653872, z: 0.86}
   m_Children: []
   m_Father: {fileID: 1356068706}
   m_RootOrder: 4
@@ -4813,7 +4942,7 @@ RectTransform:
   m_Children:
   - {fileID: 1057356468}
   m_Father: {fileID: 2095389371}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -5338,6 +5467,7 @@ MonoBehaviour:
   PowerHealt: 10
   Point1: 20
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &1402253224
 MonoBehaviour:
@@ -5661,6 +5791,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &1508164371
 GameObject:
@@ -5755,6 +5886,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &1569705429 stripped
 GameObject:
@@ -5775,6 +5907,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &1608786711 stripped
 GameObject:
@@ -5855,7 +5988,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1666788516}
   - component: {fileID: 1666788519}
-  - component: {fileID: 1666788518}
   - component: {fileID: 1666788517}
   m_Layer: 0
   m_Name: Cruz
@@ -5871,7 +6003,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1666788515}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 5, y: 40, z: -15}
+  m_LocalPosition: {x: 10, y: 40, z: -24.4}
   m_LocalScale: {x: 10, y: 10, z: 0}
   m_Children: []
   m_Father: {fileID: 1308885052}
@@ -5885,28 +6017,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1666788515}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01663f6f84fcb044cbe3187c9947f58c, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b1ab42a13df4af4ba0febc60d27ceb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   toMove: {fileID: 1666788515}
-  left: -10
-  right: 0
-  up: 13
-  down: 7
-  YLocation: -4
-  move: 0
---- !u!65 &1666788518
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1666788515}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: -0.41, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  left: -8
+  right: 8
+  top: 0
+  down: 0
+  speed: 8
+  XAxis: 0
+  ZAxis: 0
+  rotate: 0
 --- !u!212 &1666788519
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5966,6 +6088,7 @@ MonoBehaviour:
   PowerHealt: 3
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &1746447645
 GameObject:
@@ -5976,7 +6099,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1746447646}
   - component: {fileID: 1746447649}
-  - component: {fileID: 1746447648}
   - component: {fileID: 1746447647}
   m_Layer: 0
   m_Name: Cruz
@@ -5992,7 +6114,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746447645}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 15, y: 40, z: 5}
+  m_LocalPosition: {x: 10, y: 40, z: -5}
   m_LocalScale: {x: 10, y: 10, z: 0}
   m_Children: []
   m_Father: {fileID: 1180735918}
@@ -6010,24 +6132,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toMove: {fileID: 1746447645}
-  left: 0
-  right: 10
-  up: 33
-  down: 27
+  left: -8
+  right: 8
+  up: 30
+  down: 0
   YLocation: -4
   move: 0
---- !u!65 &1746447648
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1746447645}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: -0.41, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!212 &1746447649
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6153,6 +6263,7 @@ MonoBehaviour:
   PowerHealt: 1
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &1861226225
 GameObject:
@@ -6198,7 +6309,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turret: {fileID: 1861226225}
-  target: {fileID: 1666788517}
+  targetRD: {fileID: 0}
+  targetSM: {fileID: 1666788517}
   laser: {fileID: 950145154}
 --- !u!23 &1861226228
 MeshRenderer:
@@ -6276,8 +6388,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1862565106}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -15.2, y: 0, z: 37.51}
-  m_LocalScale: {x: 0.96540695, y: 2.8653872, z: 1}
+  m_LocalPosition: {x: -15.15, y: 0, z: 37.3}
+  m_LocalScale: {x: 0.96540695, y: 2.8653872, z: 1.59}
   m_Children: []
   m_Father: {fileID: 1356068706}
   m_RootOrder: 3
@@ -6352,6 +6464,7 @@ MonoBehaviour:
   PowerHealt: 3
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &1893446534 stripped
 GameObject:
@@ -6377,6 +6490,7 @@ MonoBehaviour:
   PowerHealt: 8
   Point1: 15
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!114 &1893446542
 MonoBehaviour:
@@ -6875,6 +6989,7 @@ MonoBehaviour:
   PowerHealt: 2
   Point1: 5
   PointDes: 0
+  currentH: {fileID: 0}
   Explo: {fileID: 0}
 --- !u!1 &2029401935
 GameObject:
@@ -7174,6 +7289,7 @@ RectTransform:
   - {fileID: 1351003482}
   - {fileID: 1390367829}
   - {fileID: 83647649}
+  - {fileID: 281693921}
   - {fileID: 676321216}
   - {fileID: 776813815}
   - {fileID: 188479106}

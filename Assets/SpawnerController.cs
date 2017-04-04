@@ -37,7 +37,7 @@ public class SpawnerController : MonoBehaviour {
 		string actual = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ScoreStory> ().NDes.text.ToString ();
 		int currentDestroyed = int.Parse (actual);
 
-		Debug.Log ((currentDestroyed == limit)+" "+continueLimit);
+		//Debug.Log ((currentDestroyed == limit)+" "+continueLimit);
 
 
 		if (currentDestroyed == limit && continueLimit){

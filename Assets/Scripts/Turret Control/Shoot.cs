@@ -19,8 +19,10 @@ public class Shoot : MonoBehaviour {
 	void OnTriggerEnter(Collider col){
 
 		//Debug.Log ("SPHEREHIT");
-		if(col.gameObject == GameObject.FindGameObjectWithTag("Player")){
-			Debug.Log ("Ded");
+		if(col.gameObject == GameObject.FindGameObjectWithTag("Respawn") || col.gameObject == GameObject.FindGameObjectWithTag("Player")){
+			if (GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ()) {
+				GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ().DecreaseHealth ();
+			}
 		}
 
 	}

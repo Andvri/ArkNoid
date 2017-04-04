@@ -25,7 +25,7 @@ public class touch : MonoBehaviour {
             {
 
 
-				if (!play) {
+				if (!play && ball) {
                     ball = GameObject.FindGameObjectWithTag("Player");
 					Debug.Log ("Detected");
 					GameObject.FindGameObjectWithTag("Angle").SetActive(false);
@@ -62,7 +62,7 @@ public class touch : MonoBehaviour {
 				
 
 				//Debug.Log (ball.transform.eulerAngles.y);
-				if(touchPosition.x < halfScreen){									
+				if(touchPosition.x < halfScreen && ball){									
 					ball.transform.Rotate (Vector3.down * 80 * Time.deltaTime);	
 					if (280 > ball.transform.eulerAngles.y && !(ball.transform.eulerAngles.y >= 0 && ball.transform.eulerAngles.y <= 80)) {
 						temp = ball.transform.eulerAngles;
@@ -70,7 +70,7 @@ public class touch : MonoBehaviour {
 						ball.transform.eulerAngles = temp;
 					}
 
-				} else if (touchPosition.x > halfScreen) {					
+				} else if (touchPosition.x > halfScreen && ball) {					
 					ball.transform.Rotate (Vector3.up * 80 * Time.deltaTime);	
 					if (80 < ball.transform.eulerAngles.y && !(ball.transform.eulerAngles.y >= 280 && ball.transform.eulerAngles.y <= 360) ) {
 						temp = ball.transform.eulerAngles;

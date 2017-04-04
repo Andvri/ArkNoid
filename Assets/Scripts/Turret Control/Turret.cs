@@ -5,7 +5,8 @@ using UnityEngine;
 public class Turret: MonoBehaviour {
 
 	public GameObject turret;
-	public RandomDirection target;
+	public RandomDirection targetRD;
+	public SpawnMove targetSM;
 	public GameObject laser;
 	private float spawnTime;
 
@@ -20,13 +21,22 @@ public class Turret: MonoBehaviour {
 		
 		if (Time.time >= spawnTime) {
 
-			if (target.move) {
-				target.move = false;
+			if (targetRD && targetRD.move) {				
+				targetRD.move = false;
 				StartCoroutine( MoveTarget ());
 				//Debug.Log (RandomDirection.move);
 				GameObject toIns = (Instantiate (laser, turret.transform.position, turret.transform.rotation)).gameObject;
 				toIns.SetActive(true);
 				Destroy (toIns, 4.0f);
+			}
+			if (targetSM && targetSM.XAxis) {
+				targetSM.XAxis = false;
+				StartCoroutine( MoveTarget ());
+				//Debug.Log (RandomDirection.move);
+				GameObject toIns = (Instantiate (laser, turret.transform.position, turret.transform.rotation)).gameObject;
+				toIns.SetActive(true);
+				Destroy (toIns, 4.0f);
+
 			}
 			spawnTime = Time.time + Random.Range(3,5);
 		}		
@@ -35,7 +45,12 @@ public class Turret: MonoBehaviour {
 
 	IEnumerator MoveTarget(){
 		yield return new WaitForSeconds(Random.Range(3,5));
-		target.move = true;
+		if (targetRD && !targetRD.move) {
+			targetRD.move = true;
+		}
+		if (targetSM && !targetSM.XAxis) {
+			targetSM.XAxis = true;
+		}
 			
 	}
 }

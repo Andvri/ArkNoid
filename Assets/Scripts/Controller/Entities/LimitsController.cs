@@ -21,13 +21,18 @@ public class LimitsController : MonoBehaviour {
         if(other.gameObject.CompareTag("Player"))
         {
             Destroy(other.gameObject);
-            GameObject[] balls = GameObject.FindGameObjectsWithTag("Player");
+			GameObject[] balls = GameObject.FindGameObjectsWithTag("Player");
+
+			if (GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ()) {
+				GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ().DecreaseHealth ();
+			}
+
             if (balls.Length == 1)
             {
                 TableController table = GameObject.FindGameObjectWithTag("Respawn").GetComponent<TableController>();
                 
                 table.Reset();
-                if (SceneManager.GetActiveScene().name != "StoryMode") {
+                if (SceneManager.GetActiveScene().name != "Testing") {
                     if (GameObject.FindGameObjectWithTag("GameController").GetComponent<Score>().vidas == 0)
                     {
                         Louse.SetActive(true);

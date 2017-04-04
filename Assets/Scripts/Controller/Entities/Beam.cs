@@ -18,6 +18,10 @@ public class Beam : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Respawn"))
         {
+			if (GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ()) {
+				GameObject.FindGameObjectWithTag ("Respawn").GetComponent<PHealthStory> ().DecreaseHealth ();
+			}
+			
             other.gameObject.GetComponent<TableController>().Reset();
         }
     }
