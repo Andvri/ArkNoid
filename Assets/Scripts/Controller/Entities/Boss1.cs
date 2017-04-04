@@ -39,6 +39,7 @@ public class Boss1 : MonoBehaviour {
             (ring.GetComponent<Turn>()).intensity += 1;
             speed++;
         }
+		/*
         if (transform.position.x <= -4)
         {
             despl = (new Vector3(Random.Range(0f, 0.1f), 0, Random.Range(-0.1f, 0.1f)));
@@ -60,7 +61,7 @@ public class Boss1 : MonoBehaviour {
 
         }
         transform.position = new Vector3(Mathf.Clamp(transform.position.x + (despl.x*speed),-4,4),0,Mathf.Clamp(transform.position.z + (despl.z*speed),22,28));
-        
+        */
 	}
 
     // Si la clase MonoBehaviour está habilitada, se llama a esta función en cada fotograma de velocidad de fotograma fija

@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NextUnlock : MonoBehaviour {
-
-	public Spawner[] spawns;
+	
 	public int unlockLvl;
 	// Use this for initialization
 	void Start () {
@@ -27,7 +26,25 @@ public class NextUnlock : MonoBehaviour {
 				Debug.Log (toActivate.Length);
 				foreach(GameObject aux in toActivate)
 				{
-					
+					aux.transform.Find ("Torre").gameObject.SetActive (true);
+					aux.transform.Find ("h2").gameObject.SetActive (false);
+					GameObject finalAct = aux.transform.Find ("Cruz").gameObject;
+					finalAct.SetActive (true);
+					finalAct.GetComponent<RandomDirection> ().move = true;
+
+
+				}
+
+				SpawnerController.changeCourse = true;
+				break;
+			}		
+
+			case 1:
+			{				
+				GameObject[] toActivate = GameObject.FindGameObjectsWithTag ("Turret");
+				Debug.Log (toActivate.Length);
+				foreach(GameObject aux in toActivate)
+				{
 					Transform [] toAct = aux.gameObject.GetComponentsInChildren<Transform>(true);
 
 					foreach (Transform finalStep in toAct) 
@@ -35,18 +52,17 @@ public class NextUnlock : MonoBehaviour {
 						if (finalStep.childCount > 0) {
 							for (int i = 0; i < finalStep.childCount; i++) 
 							{
-								finalStep.GetChild (i).gameObject.SetActive (true);
+								finalStep.GetChild (i).gameObject.SetActive (false);
 							}
 						}
 
 					}				
 				}
 
-
-				spawns[Spawner.currentPoint].spawnPoints[Spawner.currentPoint].SetActive (true);
-				spawns[Spawner.currentPoint].gameControl[Spawner.currentBox].SetActive(false);
-				break;
-			}		
+				SpawnerController.changeCourse = true;
+				SpawnerController.bossFight = true;
+				break;	
+			}
 
 		}
 

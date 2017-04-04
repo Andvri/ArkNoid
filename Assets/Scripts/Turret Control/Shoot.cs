@@ -42,14 +42,7 @@ public class Shoot : MonoBehaviour {
 			Vector3 aux = destination.transform.position;
 			newPos = new Vector3 (aux.x, 90, aux.z);
 			this.transform.position = Vector3.Lerp (this.transform.position, newPos, Time.deltaTime * 0.55f);
-
-			if (this.transform.position.y >= 90f && !deleted ) {
-				deleted = true;		
-			}
-
-			if (deleted) {
-				Destroy (this.gameObject);
-			}
+				
 
 		}
 	}

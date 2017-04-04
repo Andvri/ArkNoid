@@ -6,22 +6,14 @@ public class Spawner : MonoBehaviour {
 
 	public GameObject blocks;
 	public GameObject powerUps;
-	public GameObject[] spawnPoints;
-	public GameObject[] gameControl;
 	public float spawnTime;
 	public int spawnMode;
-	public static int currentBox;
-	public static int currentPoint;
-	public static int limit;
 	private float currSpTime;
 
 
 	// Use this for initialization
 	void Start () {
-		Spawner.currentBox = 0;
-		Spawner.currentPoint = 0;
 		spawnTime = 3;
-		limit = 5;
 		currSpTime = spawnTime;
 	}
 	
@@ -30,30 +22,10 @@ public class Spawner : MonoBehaviour {
 
 		currSpTime -= 1 * Time.deltaTime;
 
-		string current = (GameObject.FindWithTag ("GameController").GetComponent<ScoreStory> ()).NDes.text.ToString ();
-		int currentDestroyed = int.Parse (current);
-
 		if (currSpTime <= 0) {
 			Spawn ();
 			currSpTime = spawnTime;
-		} else if (currentDestroyed >= Spawner.limit){
-			Debug.Log ("Last Spawn:"+currentPoint);
-			spawnPoints[currentPoint].SetActive (false);
-			currentPoint++;
-
-			if (currentPoint >= spawnPoints.Length) {
-				currentPoint = 0;
-			}
-			Debug.Log ("Actual Spawn:"+currentPoint);
-		
-			GameObject[] remains = GameObject.FindGameObjectsWithTag ("Destructible Entity");
-			foreach(GameObject remaining in remains){
-				Destroy (remaining);
-			}
-
-			gameControl [currentBox].SetActive (true);
-			Spawner.limit += Spawner.limit;
-		}
+		} 
 
 	}
 
@@ -81,21 +53,19 @@ public class Spawner : MonoBehaviour {
 				Vector3 spaPosL = new Vector3 (this.transform.position.x - 5, this.transform.position.y, this.transform.position.z);
 				Vector3 spaPosR = new Vector3 (this.transform.position.x + 5, this.transform.position.y, this.transform.position.z);
 
-				Collider[] hitColliderL = Physics.OverlapBox (spaPosL, new Vector3(4,1,1.5f));
-				Collider[] hitCollderR = Physics.OverlapBox (spaPosR,new Vector3(4,1,1.5f));
+				Collider[] hitColliderL = Physics.OverlapSphere(spaPosL, 2.5f);
+				Collider[] hitColliderR = Physics.OverlapSphere(spaPosR, 2.5f);
 
 				//Debug.Log (hitColliderL.Length);
+				//Debug.Log (hitColliderR.Length);
 
-				if (hitColliderL.Length == 1) {
+				if (hitColliderL.Length <= 1 && hitColliderR.Length <= 1) {
 					GameObject toInsL = Instantiate (toSpawnL, spaPosL, this.transform.rotation).gameObject;
 					toInitialize (toInsL, 5.0f, spaPosL.x - 5, spaPosL.x, true, false);
-
-				}
-
-				if (hitCollderR.Length == 1) {
 					GameObject toInsR = Instantiate (toSpawnR, spaPosR, this.transform.rotation).gameObject;
 					toInitialize (toInsR, 5.0f, spaPosR.x, spaPosR.x + 5 , true, false);
 				}
+
 
 				break;
 			}
@@ -104,21 +74,20 @@ public class Spawner : MonoBehaviour {
 			{
 				Vector3 spaPosL = new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z);
 				Vector3 spaPosR = new Vector3 (this.transform.position.x, this.transform.position.y, this.transform.position.z);
-				Collider[] hitColliderL = Physics.OverlapSphere (spaPosL, 2.0f);
-				Collider[] hitCollderR = Physics.OverlapSphere(spaPosR,2.0f);
+				Collider[] hitColliderL = Physics.OverlapSphere(spaPosL, 2.0f);
+				Collider[] hitColliderR = Physics.OverlapSphere(spaPosR,2.0f);
 
 				//Debug.Log (hitColliderL.Length);
 
-				if (hitColliderL.Length == 1) {
+				if (hitColliderL.Length <= 1 && hitColliderR.Length <= 1) {
 					GameObject toInsL = Instantiate (toSpawnL, spaPosL, this.transform.rotation).gameObject;
 					toInitialize (toInsL, 5.0f, spaPosL.x - 5, spaPosL.x, true, true);
-
-				}
-
-				if (hitCollderR.Length == 1) {
 					GameObject toInsR = Instantiate (toSpawnR, spaPosR, this.transform.rotation).gameObject;
 					toInitialize (toInsR, 5.0f, spaPosR.x, spaPosR.x + 5 , true, true);
+
 				}
+
+
 				break;
 			}
 

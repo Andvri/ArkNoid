@@ -105,6 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1dd8497d2c9b584ca37121f179dea0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PowerHealt: 2
+  PowerHealt: 1
   Point1: 5
   PointDes: 0
